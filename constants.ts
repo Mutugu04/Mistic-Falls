@@ -1,4 +1,4 @@
-import { Package, Testimonial } from './types';
+import { Package, Testimonial, Hall, Booking } from './types';
 
 export const PACKAGES: Package[] = [
   {
@@ -37,6 +37,35 @@ export const PACKAGES: Package[] = [
     image: 'https://picsum.photos/800/600?random=4',
     category: 'wedding'
   }
+];
+
+export const HALLS: Hall[] = [
+  {
+    id: 'h1',
+    name: 'The Grand Sultan Hall',
+    capacity: 1000,
+    size: '1,200 sq. meters',
+    suitability: ['Large Weddings', 'Political Rallies', 'Grand Receptions', 'Concerts'],
+    description: 'Our flagship venue. A breathtaking expanse of pillar-less luxury featuring crystal chandeliers, a customizable stage, and acoustic paneling. Perfect for when you need to make a statement.',
+    image: 'https://picsum.photos/1000/600?random=20',
+    amenities: ['Bridal Suite', 'Backstage Area', 'Industrial AC', 'Mood Lighting']
+  },
+  {
+    id: 'h2',
+    name: 'The Executive Suite',
+    capacity: 300,
+    size: '400 sq. meters',
+    suitability: ['Corporate Meetings', 'Bridal Showers', 'Engagement Parties', 'Seminars'],
+    description: 'Designed for intimacy and professionalism. This hall offers a sophisticated ambiance with carpeted flooring and integrated AV solutions.',
+    image: 'https://picsum.photos/1000/600?random=21',
+    amenities: ['Projector System', 'Coffee Bar', 'High-Speed WiFi', 'Valet Parking']
+  }
+];
+
+export const INITIAL_BOOKINGS: Booking[] = [
+  { id: 'b1', clientName: 'Alhaji Musa Wedding', date: '2023-11-15', time: '10:00 AM', hallId: 'h1', status: 'Confirmed', paymentStatus: 'Paid' },
+  { id: 'b2', clientName: 'Zenith Bank AGM', date: '2023-11-20', time: '09:00 AM', hallId: 'h2', status: 'Confirmed', paymentStatus: 'Paid' },
+  { id: 'b3', clientName: 'Fatima Birthday', date: '2023-12-01', time: '04:00 PM', hallId: 'h2', status: 'Pending', paymentStatus: 'Deposit' },
 ];
 
 export const TESTIMONIALS: Testimonial[] = [

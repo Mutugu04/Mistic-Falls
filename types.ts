@@ -33,10 +33,36 @@ export interface BookingRequest {
   notes: string;
 }
 
+export interface Hall {
+  id: string;
+  name: string;
+  capacity: number;
+  size: string;
+  suitability: string[];
+  description: string;
+  image: string;
+  amenities: string[];
+}
+
+export type BookingStatus = 'Confirmed' | 'Pending' | 'Cancelled';
+export type PaymentStatus = 'Paid' | 'Deposit' | 'Unpaid';
+
+export interface Booking {
+  id: string;
+  clientName: string;
+  date: string;
+  time: string;
+  hallId: string;
+  status: BookingStatus;
+  paymentStatus: PaymentStatus;
+}
+
 export enum PageView {
   HOME = 'HOME',
+  VENUES = 'VENUES',
   PACKAGES = 'PACKAGES',
   GALLERY = 'GALLERY',
   BOOKING = 'BOOKING',
-  CONTACT = 'CONTACT'
+  CONTACT = 'CONTACT',
+  ADMIN = 'ADMIN'
 }
